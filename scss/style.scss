@@ -1,0 +1,120 @@
+@import 'config';
+@import 'utilities';
+@import 'home';
+@import 'products';
+@import 'about';
+@import 'arrivals';
+@import 'contact';
+@import 'blog';
+@import 'footer';
+
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  // background: rgba(0, 0, 0, 0.3);
+  padding: 3rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & .logo {
+    font-size: 2.5rem;
+    color: $white;
+    font-weight: bolder;
+
+    & i {
+      padding-right: 0.5rem;
+      color: $main-color;
+      animation: floating 3s linear infinite;
+    }
+
+    @keyframes floating {
+      0%,
+      100% {
+        transform: translateY(0rem);
+      }
+      50% {
+        transform: translateY(-1rem);
+      }
+    }
+  }
+
+
+    & .navbar a {
+    font-size: 1.7rem;
+    color: $white;
+    margin: 0 1rem;
+
+    &.active,
+    &:hover {
+      color: $main-color;
+     }
+    }
+
+    & .icons {
+    & #menu-btn {
+      display: none;
+    }
+
+    & a,
+    div {
+      font-size: 2rem;
+      color: $white;
+      margin-left: 2rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+   }
+
+    & .search-form {
+    position: absolute;
+    top: 115%; right: -105%;
+    background: $white;
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+
+    &.active {
+      right: 2rem;
+      opacity: 1;
+      transition: .4s linear;
+    }
+
+    & input {
+        width: 100%;
+        padding: 0 1.5rem;
+        font-size: 1.6rem;
+        color: $black;
+        text-transform: none;
+    }
+
+    & label{
+        font-size: 2.5rem;
+        padding-right: 1.5rem;
+        color: $black;
+        cursor: pointer;
+
+        &:hover {
+          color: $main-color;
+        }
+    }
+  }
+
+  &.active {
+    padding: 2rem 9%;
+    background: $grayBlack;
+  }
+};
+
+@import 'queries';

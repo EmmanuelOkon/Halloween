@@ -1,0 +1,78 @@
+.arrivals .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+
+    & .box {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+
+        & .image {
+            height: 40rem;
+            overflow: hidden;
+            width: 100%;
+
+            & img{
+                height:100%;
+                width:100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover .image img{
+            transform: scale(1.2);
+        }
+
+        &:hover .icons{
+            right: 1rem;
+        }
+
+        & .icons{
+            position: absolute;
+            top: 0; right: -6rem;
+            z-index: 1;
+
+            & a{
+                height: 4.5rem;
+                width: 4.5rem;
+                line-height: 4.5rem;
+                border-radius: 50%;
+                font-size: 2rem;
+                color: $black;
+                background: $white;
+                margin-top: 1rem;
+                display: block;
+
+                &:hover{
+                    background: $main-color;
+                    color: $white
+                }
+            }
+        }
+
+        & .content{
+            padding: 1rem 0;
+
+            & h3{
+                font-size: 2.5rem;
+                font-weight: normal;
+                color: $white;
+            }
+
+            & .price{
+                font-size: 2rem;
+                font-weight: bolder;
+                color: $white;
+
+                & span{
+                    font-size: 1.5rem;
+                    font-weight: normal;
+                    color: $main-color;
+                    text-decoration: line-through;
+                }
+            }
+        }
+
+    }
+};

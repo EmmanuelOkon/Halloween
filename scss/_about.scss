@@ -1,0 +1,22 @@
+.about{
+    background: url(../images/about-bt.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    & .content{
+        padding: 13rem 0;
+        max-width: 50rem;
+
+        & h3{
+            font-size: 3rem;
+            color: $main-color;
+        }
+
+        & p{
+            font-size: 1.5rem;
+            color: $white;
+            line-height: 2;
+            padding: 1rem 0;
+        }
+    }
+}

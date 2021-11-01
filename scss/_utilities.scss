@@ -1,0 +1,35 @@
+$main-color: #EF7819;
+$black: #141215;
+$white: #FFF;
+$grayBlack: #222;
+
+
+.heading{
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    color: $white;
+
+    & span{
+        color: $main-color;
+    }
+}
+
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    background: $white;
+    font-weight: 500;
+    color: $black;
+    cursor: pointer;
+    border-radius: .3rem;
+
+    &:hover{
+        background: $main-color;
+        color: $white;
+        letter-spacing: .1rem;
+    }
+};
